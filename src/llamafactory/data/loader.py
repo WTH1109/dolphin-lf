@@ -317,6 +317,13 @@ def get_dataset(
     # Load and preprocess dataset
     with training_args.main_process_first(desc="load dataset"):
         dataset = _get_merged_dataset(data_args.dataset, model_args, data_args, training_args, stage)
+        print(f"************************************************************************************************************")
+
+        print(f"Total samples: {len(dataset)}")
+
+        print(f"************************************************************************************************************")
+
+
         eval_dataset = _get_merged_dataset(
             data_args.eval_dataset, model_args, data_args, training_args, stage, merge=training_args.do_predict
         )

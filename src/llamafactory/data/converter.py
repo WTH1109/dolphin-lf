@@ -261,7 +261,6 @@ def align_dataset(
             load_from_cache_file=(not data_args.overwrite_cache) or (training_args.local_process_index != 0),
             desc="Converting format of dataset",
         )
-
     dataset_converter = get_dataset_converter(dataset_attr.formatting, dataset_attr, data_args)
     return dataset.map(
         dataset_converter,

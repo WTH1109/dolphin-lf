@@ -58,7 +58,21 @@ def merge_dataset(
         if data_args.streaming:
             logger.warning_rank0_once("The samples between different datasets will not be mixed in streaming mode.")
 
-        return concatenate_datasets(all_datasets)
+        merged = None
+        for idx, ds in enumerate(all_datasets):
+            try:
+                if merged is None:
+                    merged = ds
+                else:
+                    merged = concatenate_datasets([merged, ds])
+                print(f"✅ 成功合并数据集 {idx}")
+            except ValueError as e:
+                print(f"❌ 合并失败于数据集 {idx}")
+                print("当前合并特征:", merged.features if merged else "None")
+                print("问题数据集特征:", ds.features)
+                raise e
+
+        return merged
     elif data_args.mix_strategy.startswith("interleave"):
         if not data_args.streaming:
             logger.warning_rank0_once("We recommend using `mix_strategy=concat` in non-streaming mode.")

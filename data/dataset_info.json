@@ -1,4 +1,165 @@
 {
+  
+  
+  "cp500/ultrasound-samples": {
+    "hf_hub_url": "/mnt/pfs-gv8sxa/tts/dhg/ghc/wengtaohan/Data/cp500/ultrasound-samples"
+  },
+  
+  "Ka4on/ultrasound_train": {
+    "hf_hub_url": "/mnt/pfs-gv8sxa/tts/dhg/ghc/wengtaohan/Data/Ka4on/ultrasound_train"
+  },
+  
+  "dolphin_r1_distillation_v1": {
+    "hf_hub_url": "/mnt/pfs-gv8sxa/tts/dhg/ghc/wengtaohan/Data/DolphinAI/UltrasoundDataset",
+    "folder": "distillation/r1_distillation_v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },  
+  "medical-o1-reasoning-SFT_zh": {
+    "hf_hub_url": "/mnt/pfs-gv8sxa/tts/dhg/ghc/wengtaohan/Data/DolphinAI/UltrasoundDataset",
+    "folder": "public_data/medical-o1-reasoning-SFT/zh",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "system": "system"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },  
+  "medical-o1-reasoning-SFT_en": {
+    "hf_hub_url": "/mnt/pfs-gv8sxa/tts/dhg/ghc/wengtaohan/Data/DolphinAI/UltrasoundDataset",
+    "folder": "public_data/medical-o1-reasoning-SFT/en",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "system": "system"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  }, 
+
+  "39_ultrasound_report": {
+    "hf_hub_url": "/mnt/pfs-gv8sxa/tts/dhg/ghc/wengtaohan/Data/DolphinAI/UltrasoundBenchmark",
+    "subset": "39_ultrasound_report",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },  
+  "scan_qa_v1": {
+    "hf_hub_url": "/mnt/pfs-gv8sxa/tts/dhg/ghc/wengtaohan/Data/DolphinAI/UltrasoundDataset",
+    "folder": "teaching_material/scan_qa_v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },     
+  "caption_v1": {
+    "hf_hub_url": "/mnt/pfs-gv8sxa/tts/dhg/ghc/wengtaohan/Data/DolphinAI/UltrasoundDataset",
+    "folder": "teaching_material/caption_v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },   
+  "scan_qa_v2": {
+    "hf_hub_url": "/mnt/pfs-gv8sxa/tts/dhg/ghc/wengtaohan/Data/DolphinAI/UltrasoundDataset",
+    "folder": "teaching_material/scan_qa_v2",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  }, 
+
+  "illustration_v1": {
+    "hf_hub_url": "/mnt/pfs-gv8sxa/tts/dhg/ghc/wengtaohan/Data/DolphinAI/UltrasoundDataset",
+    "folder": "teaching_material/illustration_v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },  
+
+  "illustration_v2": {
+    "hf_hub_url": "/mnt/pfs-gv8sxa/tts/dhg/ghc/wengtaohan/Data/DolphinAI/UltrasoundDataset",
+    "folder": "teaching_material/illustration_v2",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },  
+
+   
+  "tongue": {
+    "hf_hub_url": "/mnt/pfs-gv8sxa/tts/dhg/ghc/wengtaohan/Data/WTH1109/sft_tongue_IgA",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "identity": {
     "file_name": "identity.json"
   },
