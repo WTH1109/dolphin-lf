@@ -1,0 +1,5 @@
+model_name_or_path: /mnt/pfs-gv8sxa/tts/dhg/ghc/wengtaohan/models/Qwen/Qwen2-VL-7B-Instruct
+adapter_name_or_path: /mnt/pfs-gv8sxa/tts/dhg/ghc/wengtaohan/Code/LLaMA-Factory/saves/qwen2_vl-7b/lora/sft
+template: qwen2_vl
+infer_backend: huggingface  # choices: [huggingface, vllm]
+trust_remote_code: true
