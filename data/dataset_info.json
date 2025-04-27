@@ -2,15 +2,15 @@
   
   
   "cp500/ultrasound-samples": {
-    "hf_hub_url": "huggingface/cp500/ultrasound-samples"
+    "hf_hub_url": "data/huggingface/cp500/ultrasound-samples"
   },
   
   "Ka4on/ultrasound_train": {
-    "hf_hub_url": "huggingface/Ka4on/ultrasound_train"
+    "hf_hub_url": "data/huggingface/Ka4on/ultrasound_train"
   },
   
   "dolphin_r1_distillation_v1": {
-    "hf_hub_url": "huggingface/DolphinAI/UltrasoundDataset",
+    "hf_hub_url": "data/huggingface/DolphinAI/UltrasoundDataset",
     "folder": "distillation/r1_distillation_v1",
     "formatting": "sharegpt",
     "columns": {
@@ -24,7 +24,7 @@
     }
   },  
   "medical-o1-reasoning-SFT_zh": {
-    "hf_hub_url": "huggingface/DolphinAI/UltrasoundDataset",
+    "hf_hub_url": "data/huggingface/DolphinAI/UltrasoundDataset",
     "subset": "medical-o1-reasoning-SFT_zh",
     "formatting": "sharegpt",
     "columns": {
@@ -39,7 +39,7 @@
     }
   },  
   "medical-o1-reasoning-SFT_en": {
-    "hf_hub_url": "huggingface/DolphinAI/UltrasoundDataset",
+    "hf_hub_url": "data/huggingface/DolphinAI/UltrasoundDataset",
     "subset": "medical-o1-reasoning-SFT_en",
     "formatting": "sharegpt",
     "columns": {
@@ -55,7 +55,7 @@
   }, 
 
   "39_ultrasound_report": {
-    "hf_hub_url": "huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "39_ultrasound_report",
     "formatting": "sharegpt",
     "columns": {
@@ -71,7 +71,7 @@
   },  
 
   "m1_caption_v1": {
-    "hf_hub_url": "huggingface/DolphinAI/UltrasoundDataset",
+    "hf_hub_url": "data/huggingface/DolphinAI/UltrasoundDataset",
     "subset": "teaching-material-01_caption-v1",
     "formatting": "sharegpt",
     "columns": {
@@ -86,7 +86,7 @@
     }
   },   
   "m2_caption_v1": {
-    "hf_hub_url": "huggingface/DolphinAI/UltrasoundDataset",
+    "hf_hub_url": "data/huggingface/DolphinAI/UltrasoundDataset",
     "subset": "teaching-material-02_caption-v1",
     "formatting": "sharegpt",
     "columns": {
@@ -102,7 +102,7 @@
   },   
 
   "m3_caption_v1": {
-    "hf_hub_url": "huggingface/DolphinAI/UltrasoundDataset",
+    "hf_hub_url": "data/huggingface/DolphinAI/UltrasoundDataset",
     "subset": "teaching-material-03_caption-v1",
     "formatting": "sharegpt",
     "columns": {
@@ -118,7 +118,7 @@
   },   
 
   "m4_caption_v1": {
-    "hf_hub_url": "huggingface/DolphinAI/UltrasoundDataset",
+    "hf_hub_url": "data/huggingface/DolphinAI/UltrasoundDataset",
     "subset": "teaching-material-04_caption-v1",
     "formatting": "sharegpt",
     "columns": {
@@ -134,7 +134,7 @@
   },   
 
   "m1_scan_qa_v2": {
-    "hf_hub_url": "huggingface/DolphinAI/UltrasoundDataset",
+    "hf_hub_url": "data/huggingface/DolphinAI/UltrasoundDataset",
     "subset": "teaching-material-01_scan_qa_v2",
     "formatting": "sharegpt",
     "columns": {
@@ -149,7 +149,7 @@
   }, 
 
   "m1_illustration_v2": {
-    "hf_hub_url": "huggingface/DolphinAI/UltrasoundDataset",
+    "hf_hub_url": "data/huggingface/DolphinAI/UltrasoundDataset",
     "subset": "teaching-material-01_illustration_v2",
     "formatting": "sharegpt",
     "columns": {
@@ -165,7 +165,7 @@
   },  
 
   "m4_illustration_v1": {
-    "hf_hub_url": "huggingface/DolphinAI/UltrasoundDataset",
+    "hf_hub_url": "data/huggingface/DolphinAI/UltrasoundDataset",
     "folder": "teaching-material-04_illustration_v1",
     "formatting": "sharegpt",
     "columns": {
@@ -182,7 +182,7 @@
 
    
   "tongue": {
-    "hf_hub_url": "huggingface/WTH1109/sft_tongue_IgA",
+    "hf_hub_url": "data/huggingface/WTH1109/sft_tongue_IgA",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -426,7 +426,7 @@
     "formatting": "sharegpt"
   },
   "ultrachat_200k": {
-    "hf_hub_url": "HuggingFaceH4/ultrachat_200k",
+    "hf_hub_url": "data/huggingfaceH4/ultrachat_200k",
     "ms_hub_url": "AI-ModelScope/ultrachat_200k",
     "formatting": "sharegpt",
     "columns": {
@@ -472,7 +472,7 @@
     }
   },
   "cosmopedia": {
-    "hf_hub_url": "HuggingFaceTB/cosmopedia",
+    "hf_hub_url": "data/huggingfaceTB/cosmopedia",
     "columns": {
       "prompt": "prompt",
       "response": "text"
@@ -849,13 +849,13 @@
     }
   },
   "fineweb": {
-    "hf_hub_url": "HuggingFaceFW/fineweb",
+    "hf_hub_url": "data/huggingfaceFW/fineweb",
     "columns": {
       "prompt": "text"
     }
   },
   "fineweb_edu": {
-    "hf_hub_url": "HuggingFaceFW/fineweb-edu",
+    "hf_hub_url": "data/huggingfaceFW/fineweb-edu",
     "columns": {
       "prompt": "text"
     }
