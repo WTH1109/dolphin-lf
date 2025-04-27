@@ -10,8 +10,8 @@
   },
 
   "dolphin_r1_distillation_v1": {
-    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundDataset",
-    "folder": "distillation/r1_distillation_v1",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundDistillation",
+    "subset": "r1_distillation_v1",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
