@@ -1,5 +1,19 @@
 {
-  
+  "anatomy_classification_qa_v1": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
+    "subset": "anatomy_classification_qa_v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   
   "cp500/ultrasound-samples": {
     "hf_hub_url": "./data/huggingface/cp500/ultrasound-samples"
@@ -14,7 +28,23 @@
     "subset": "r1_distillation_v1",
     "formatting": "sharegpt",
     "columns": {
-      "messages": "messages"
+      "messages": "messages",
+      "system": "system"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "dolphin_r1_distillation_v2": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundDistillation",
+    "subset": "r1_distillation_v2",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "system": "system"
     },
     "tags": {
       "role_tag": "role",
