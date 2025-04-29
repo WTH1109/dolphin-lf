@@ -250,26 +250,12 @@ def evaluate_dataset(model, processor, dataset, dataset_name, output_dir, batch_
         if not inputs:
             continue
 
-        # 分离纯文本和多模态输入
-        text_inputs = [inp for inp in inputs if inp["multi_modal_data"] is None]
-        mm_inputs = [inp for inp in inputs if inp["multi_modal_data"] is not None]
-
-        # 分别处理
         outputs = []
-        if text_inputs:
-            text_prompts = [inp["prompt"] for inp in text_inputs]
-            text_outputs = model.generate(text_prompts, sampling_params=sampling_params)
-            outputs.extend([out.outputs[0].text for out in text_outputs])
-
-        if mm_inputs:
-            mm_prompts = [inp["prompt"] for inp in mm_inputs]
-            mm_data = [inp["multi_modal_data"] for inp in mm_inputs]
-            mm_outputs = model.generate(
-                mm_prompts,
-                multi_modal_data=mm_data,
-                sampling_params=sampling_params
-            )
-            outputs.extend([out.outputs[0].text for out in mm_outputs])
+        mm_outputs = model.generate(
+            inputs,
+            sampling_params=sampling_params
+        )
+        outputs.extend([out.outputs[0].text for out in mm_outputs])
 
         # 保存结果
         for j, out in enumerate(outputs):
