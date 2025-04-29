@@ -146,7 +146,7 @@ def prepare_example(example, processor):
         "multi_modal_data": {"image": image_inputs} if image_inputs is not None else None
     }
 
-    return mm_input, user_msg["content"].replace('<image>', ''), assistant_msg
+    return mm_input, user_msg["content"].replace('<image>', ''), assistant_msg["content"]
 
 
 def resize_image(image, max_size=512):
@@ -184,6 +184,21 @@ def save_images(images, base_dir, idx):
 
     return saved_paths
 
+def append_to_json(new_data, file_path):
+    # 1. 读取现有数据
+    with open(file_path, "r", encoding="utf-8") as f:
+        existing_data = json.load(f)  # 假设原始数据是列表格式
+
+    # 2. 追加新数据
+    if isinstance(new_data, list):
+        existing_data.extend(new_data)
+    else:
+        existing_data.append(new_data)
+
+    # 3. 写回文件
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump(existing_data, f, ensure_ascii=False, indent=2)
+
 
 def save_results_to_json(result, output_path, idx):
     """保存结果到JSON文件，图像保存到image文件夹"""
@@ -214,6 +229,8 @@ def save_results_to_json(result, output_path, idx):
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(processed_results, f, ensure_ascii=False, indent=2)
 
+    append_to_json(processed_results, output_path)
+
     print(f"结果已保存到 {output_path}")
 
 
@@ -221,6 +238,10 @@ def evaluate_dataset(model, processor, dataset, dataset_name, output_dir, batch_
     """评估单个数据集"""
     os.makedirs(output_dir, exist_ok=True)
     output_file = os.path.join(output_dir, f"{dataset_name.replace('/', '_')}_results.jsonl")
+    if os.path.exists(output_file):
+        os.remove(output_file)
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump([], f, ensure_ascii=False, indent=2)
 
     sampling_params = SamplingParams(
         temperature=0.7,
@@ -307,6 +328,7 @@ def main():
     # 评估每个数据集
     all_results = []
     for name, dataset in datasets:
+        name = name + '/' + args.subset
         results = evaluate_dataset(
             llm, processor, dataset, name, args.output,
             args.batch_size, args.max_new_tokens
