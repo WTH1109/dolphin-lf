@@ -7,7 +7,7 @@ hf_repo_id = 'DolphinAI/UltrasoundBenchmark'
 config_name = 'anatomy_classification_qa_v1'
 dataset_cache_path = './data_tmp'
 
-login(token="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")  # 从 https://huggingface.co/settings/tokens 获取
+login(token="")  # 从 https://huggingface.co/settings/tokens 获取
 
 dataset = load_dataset(hf_repo_id, config_name, cache_dir=dataset_cache_path)
 
