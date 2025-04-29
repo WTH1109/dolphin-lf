@@ -232,8 +232,8 @@ def evaluate_dataset(model, processor, dataset, dataset_name, output_dir, batch_
     output_file = os.path.join(output_dir, f"{dataset_name.replace('/', '_')}_results.jsonl")
     if os.path.exists(output_file):
         os.remove(output_file)
-        with open(output_file, "w", encoding="utf-8") as f:
-            json.dump([], f, ensure_ascii=False, indent=2)
+    with open(output_file, "w", encoding="utf-8") as f:
+        json.dump([], f, ensure_ascii=False, indent=2)
 
     sampling_params = SamplingParams(
         temperature=0.7,
