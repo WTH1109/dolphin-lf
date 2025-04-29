@@ -71,13 +71,13 @@ def load_datasets(dataset_names, subset=None):
                 dataset = load_dataset(tmp_dataset_name, name=tmp_subset_name)
                 data_name = tmp_dataset_name + '/' + tmp_subset_name
             if 'test' not in dataset:
-                print(f"警告: 数据集 {name} 没有test分割，使用第一个可用分割")
+                print(f"警告: 数据集 {data_name} 没有test分割，使用第一个可用分割")
                 split = list(dataset.keys())[0]
                 dataset = dataset[split]
             else:
                 dataset = dataset['test']
 
-            datasets.append((tmp_dataset_name, dataset))
+            datasets.append((data_name, dataset))
         except Exception as e:
             print(f"加载数据集 {tmp_dataset_name} 失败: {str(e)}")
     return datasets
@@ -225,10 +225,6 @@ def save_results_to_json(result, output_path, idx):
 
         processed_results.append(processed)
 
-    # 保存JSON文件
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(processed_results, f, ensure_ascii=False, indent=2)
-
     append_to_json(processed_results, output_path)
 
     print(f"结果已保存到 {output_path}")
@@ -328,7 +324,6 @@ def main():
     # 评估每个数据集
     all_results = []
     for name, dataset in datasets:
-        name = name + '/' + args.subset
         results = evaluate_dataset(
             llm, processor, dataset, name, args.output,
             args.batch_size, args.max_new_tokens
