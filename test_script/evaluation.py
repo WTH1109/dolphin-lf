@@ -11,6 +11,9 @@ from qwen_vl_utils import process_vision_info
 import numpy as np
 from PIL import Image
 import base64
+import json
+import os
+from pathlib import Path
 
 
 def parse_args():
@@ -123,25 +126,96 @@ def prepare_example(example, processor):
     user_msg = next(m for m in example["messages"] if m["role"] == "user")
     assistant_msg = next(m for m in example["messages"] if m["role"] == "assistant")
 
-    build_messages(user_msg["content"].replace('<image>', ''), system=system, image=images)
+    qwen_message = build_messages(user_msg["content"].replace('<image>', ''), system=system, image=images)
 
 
     import pdb
     pdb.set_trace()
 
     prompt = processor.apply_chat_template(
-        messages,
+        qwen_message,
         tokenize=False,
         add_generation_prompt=True,
     )
 
     # 处理视觉输入
-    image_inputs, video_inputs = process_vision_info(messages)
+    image_inputs, video_inputs = process_vision_info(qwen_message)
 
-    return {
+    mm_input = {
         "prompt": prompt,
         "multi_modal_data": {"image": image_inputs} if image_inputs is not None else None
     }
+
+    return mm_input, user_msg["content"].replace('<image>', ''), assistant_msg
+
+
+def resize_image(image, max_size=512):
+    """调整图像大小，保持长宽比，最大边不超过max_size"""
+    if not isinstance(image, Image.Image):
+        return image
+
+    width, height = image.size
+    if max(width, height) <= max_size:
+        return image
+
+    ratio = max_size / max(width, height)
+    new_size = (int(width * ratio), int(height * ratio))
+    return image.resize(new_size, Image.LANCZOS)
+
+
+def save_images(images, base_dir, idx):
+    """保存图像到image文件夹，返回路径列表"""
+    image_dir = Path(base_dir) / "images"
+    image_dir.mkdir(parents=True, exist_ok=True)
+
+    saved_paths = []
+    for i, img in enumerate(images):
+        if not isinstance(img, Image.Image):
+            saved_paths.append(str(img))  # 如果不是PIL图像，保持原样
+            continue
+
+        # 调整大小
+        img = resize_image(img)
+
+        # 保存图像
+        img_path = image_dir / f"{idx}_{i}.jpg"
+        img.save(img_path, quality=95)
+        saved_paths.append(str(img_path.relative_to(base_dir)))
+
+    return saved_paths
+
+
+def save_results_to_json(results, output_path):
+    """保存结果到JSON文件，图像保存到image文件夹"""
+    output_path = Path(output_path)
+    base_dir = output_path.parent
+
+    processed_results = []
+    for idx, result in enumerate(results):
+        processed = {
+            "dataset": result["dataset"],
+            "id": result["id"],
+            "input": result["input"],
+            "output": result["output"],
+            "ground_truth": result["ground_truth"],
+        }
+
+        if "images" in result:
+            images = result["images"]
+            if isinstance(images, list):
+                processed["image_paths"] = save_images(images, base_dir, idx)
+            elif isinstance(images, Image.Image):
+                processed["image_paths"] = save_images([images], base_dir, idx)
+            else:
+                processed["image_paths"] = [str(images)]
+
+        processed_results.append(processed)
+
+    # 保存JSON文件
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(processed_results, f, ensure_ascii=False, indent=2)
+
+    print(f"结果已保存到 {output_path}")
 
 
 def evaluate_dataset(model, processor, dataset, dataset_name, output_dir, batch_size=1, max_new_tokens=1024):
@@ -161,9 +235,14 @@ def evaluate_dataset(model, processor, dataset, dataset_name, output_dir, batch_
 
         # 准备批处理输入
         inputs = []
+        user_msg_list = []
+        assistant_msg_list = []
         for example in batch:
             try:
-                inputs.append(prepare_example(example, processor))
+                mm_input, user_msg, assistant_msg = prepare_example(example, processor)
+                inputs.append(mm_input)
+                user_msg_list.append(user_msg)
+                assistant_msg_list.append(assistant_msg)
             except Exception as e:
                 print(f"准备样本 {i} 失败: {str(e)}")
                 continue
@@ -201,18 +280,17 @@ def evaluate_dataset(model, processor, dataset, dataset_name, output_dir, batch_
             result = {
                 "dataset": dataset_name,
                 "id": dataset[idx].get("id", idx),
-                "input": dataset[idx]['messages'],
+                "input": user_msg_list[j],
                 "output": out,
-                "ground_truth": dataset[idx].get("response", dataset[idx].get("answer", ""))
+                "ground_truth": assistant_msg_list[j],
             }
             if 'images' in dataset[idx]:
                 result['images'] = dataset[idx]['images']
 
             results.append(result)
 
-            # 实时写入文件
-            with open(output_file, "a", encoding="utf-8") as f:
-                f.write(json.dumps(result, ensure_ascii=False) + "\n")
+            save_results_to_json(result, output_file)
+
 
     return results
 
