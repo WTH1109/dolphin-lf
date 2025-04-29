@@ -185,29 +185,28 @@ def save_images(images, base_dir, idx):
     return saved_paths
 
 
-def save_results_to_json(results, output_path):
+def save_results_to_json(result, output_path, idx):
     """保存结果到JSON文件，图像保存到image文件夹"""
     output_path = Path(output_path)
     base_dir = output_path.parent
 
     processed_results = []
-    for idx, result in enumerate(results):
-        processed = {
-            "dataset": result["dataset"],
-            "id": result["id"],
-            "input": result["input"],
-            "output": result["output"],
-            "ground_truth": result["ground_truth"],
-        }
+    processed = {
+        "dataset": result["dataset"],
+        "id": result["id"],
+        "input": result["input"],
+        "output": result["output"],
+        "ground_truth": result["ground_truth"],
+    }
 
-        if "images" in result:
-            images = result["images"]
-            if isinstance(images, list):
-                processed["image_paths"] = save_images(images, base_dir, idx)
-            elif isinstance(images, Image.Image):
-                processed["image_paths"] = save_images([images], base_dir, idx)
-            else:
-                processed["image_paths"] = [str(images)]
+    if "images" in result:
+        images = result["images"]
+        if isinstance(images, list):
+            processed["image_paths"] = save_images(images, base_dir, idx)
+        elif isinstance(images, Image.Image):
+            processed["image_paths"] = save_images([images], base_dir, idx)
+        else:
+            processed["image_paths"] = [str(images)]
 
         processed_results.append(processed)
 
@@ -275,7 +274,7 @@ def evaluate_dataset(model, processor, dataset, dataset_name, output_dir, batch_
 
             results.append(result)
 
-            save_results_to_json(result, output_file)
+            save_results_to_json(result, output_file, idx)
 
 
     return results
