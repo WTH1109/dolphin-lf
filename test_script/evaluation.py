@@ -128,10 +128,6 @@ def prepare_example(example, processor):
 
     qwen_message = build_messages(user_msg["content"].replace('<image>', ''), system=system, image=images)
 
-
-    import pdb
-    pdb.set_trace()
-
     prompt = processor.apply_chat_template(
         qwen_message,
         tokenize=False,

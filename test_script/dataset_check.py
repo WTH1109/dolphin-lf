@@ -1,16 +1,27 @@
-dataset = load_dataset(hf_repo_id, config_name, cache_dir=dataset_cache_path, data_dir=hf_dataset_data_dir)
+from datasets import load_dataset
+import os
+from huggingface_hub import login
+os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
+
+hf_repo_id = 'DolphinAI/UltrasoundBenchmark'
+config_name = 'anatomy_classification_qa_v1'
+dataset_cache_path = './data_tmp'
+
+login(token="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")  # 从 https://huggingface.co/settings/tokens 获取
+
+dataset = load_dataset(hf_repo_id, config_name, cache_dir=dataset_cache_path)
 
 
-def example_image(example):
-    print(example["id"])
-    if len(example["images"]) != 1:
-        with open("./out", "a") as f:
-            f.write(f"{example["id"]}")
-    example["image"] = example["images"][0]
-    os.makedirs("./output/test_OUT", exist_ok=True)
-    example["image"].save(f"./output/test_OUT/{example["id"]}.png")
-    print(example["id"])
+def check_data(example):
+    image_len = len(example["images"])
+    user_prompt=example['messages'][0]['content']
+    image_place_hold_len = user_prompt.count("<image>")
+    try:
+        assert image_len == image_place_hold_len
+    except AssertionError:
+        print(example["id"])
     return example
 
 
-dataset.map(example_image, num_proc=100)
+for data in dataset:
+    check_data(data)
