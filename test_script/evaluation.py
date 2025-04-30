@@ -23,6 +23,8 @@ def parse_args():
     parser.add_argument("-s", "--subset", type=str, default=None, help="HuggingFace subset")
     parser.add_argument("-d", "--dataset", type=str, required=True,
                         help="要评估的数据集名称或路径，支持多个数据集用逗号分隔")
+    parser.add_argument("-s", "--max_samples", default=None,
+                        help="最大采样数")
     parser.add_argument("-o", "--output", type=str, default="results",
                         help="评估结果输出目录")
     parser.add_argument("--batch_size", type=int, default=1,
@@ -54,7 +56,7 @@ def auto_detect_gpus():
     return 1
 
 
-def load_datasets(dataset_names, subset=None):
+def load_datasets(dataset_names, subset=None, max_samples=None):
     datasets = []
     subsets_name_list = [subset_item for subset_item in subset.split(",")]
     dataset_name_list = [dataset_item for dataset_item in dataset_names.split(",")]
@@ -76,6 +78,9 @@ def load_datasets(dataset_names, subset=None):
                 dataset = dataset[split]
             else:
                 dataset = dataset['test']
+
+            if max_samples is not None:
+                dataset = dataset.select(range(min(max_samples, len(dataset))))
 
             datasets.append((data_name, dataset))
         except Exception as e:
@@ -313,7 +318,7 @@ def main():
 
     # 加载数据集
     print(f"加载数据集: {args.dataset}")
-    datasets = load_datasets(args.dataset, args.subset)
+    datasets = load_datasets(args.dataset, args.subset, args.max_samples)
     if not datasets:
         raise ValueError("没有可用的数据集加载成功")
 
