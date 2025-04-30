@@ -124,7 +124,6 @@ def build_messages(text, system=None,image=None):
 
 def prepare_example(example, processor):
     """准备单个样本用于推理"""
-    messages = example.get('messages', [])
     images = example.get('images', None)
     system = example.get('system', None)
 
@@ -248,8 +247,8 @@ def evaluate_dataset(model, processor, dataset, dataset_name, output_dir, batch_
 
     results = []
     for i in tqdm(range(0, len(dataset), batch_size), desc=f"评估 {dataset_name}"):
-        end_idx = min(i + batch_size, len(dataset))
-        batch = dataset[i:end_idx]  # ✅ 正确获取当前批次数据
+        batch_num = min(i + batch_size, len(dataset))
+        batch = [dataset[i+k] for k in range(batch_num)]
 
         # 准备批处理输入
         inputs = []
