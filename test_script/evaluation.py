@@ -248,7 +248,8 @@ def evaluate_dataset(model, processor, dataset, dataset_name, output_dir, batch_
 
     results = []
     for i in tqdm(range(0, len(dataset), batch_size), desc=f"评估 {dataset_name}"):
-        batch = [dataset[i] for i in range(batch_size)]
+        end_idx = min(i + batch_size, len(dataset))
+        batch = dataset[i:end_idx]  # ✅ 正确获取当前批次数据
 
         # 准备批处理输入
         inputs = []
