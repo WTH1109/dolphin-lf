@@ -23,7 +23,7 @@ def parse_args():
     parser.add_argument("-s", "--subset", type=str, default=None, help="HuggingFace subset")
     parser.add_argument("-d", "--dataset", type=str, required=True,
                         help="要评估的数据集名称或路径，支持多个数据集用逗号分隔")
-    parser.add_argument("-s", "--max_samples", default=None,
+    parser.add_argument("-ms", "--max_samples", default=None,
                         help="最大采样数")
     parser.add_argument("-o", "--output", type=str, default="results",
                         help="评估结果输出目录")
