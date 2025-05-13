@@ -100,6 +100,54 @@
     }
   },
 
+  "anatomy_qa": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
+    "subset": "anatomy_qa",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+
+  "benchmark_qa_10": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
+    "subset": "benchmark_qa_10",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+
+  "benchmark_qa_18": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
+    "subset": "benchmark_qa_18",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+
   "m1_caption_v1": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
     "subset": "teaching-material-01_caption-v1",
@@ -197,6 +245,102 @@
   "m4_illustration_v1": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
     "subset": "teaching-material-04_illustration-v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+
+  "m5_illustration_v1": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-05_illustration-v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+
+  "m6_illustration_v1": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-06_illustration-v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+
+  "m7_illustration_v1": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-07_illustration-v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+
+  "m8_illustration_v1": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-08_illustration-v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+
+  "m9_illustration_v1": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-09_illustration-v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+
+  "m10_illustration_v1": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-10_illustration-v1",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
