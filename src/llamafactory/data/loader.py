@@ -255,24 +255,7 @@ def _get_preprocessed_dataset(
             desc="Running tokenizer on dataset",
         )
 
-    def add_image_tag(example):
-        """
-        Adds <image> tag to the prompt if the example contains an image.
-        """
-        if example.get("image") is not None and example.get("messages") is not None:
-            image_len = len(example["image"]) if isinstance(example["image"], list) else 1
-            image_place_holder_cnt = example['messages'][0]['content'].count("<image>")
-            if image_place_holder_cnt != image_len:
-                example['messages'][0]['content'].replace("<image>", "")
-                example['messages'][0]['content'] = "<image>" * image_len + example['messages'][0]['content']
-        return example
     
-    dataset = dataset.map(
-        add_image_tag,
-        batched=True,
-        batch_size=data_args.preprocessing_batch_size,
-        **kwargs,
-    )
 
     dataset = dataset.map(
         dataset_processor.preprocess_dataset,
