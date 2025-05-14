@@ -265,12 +265,6 @@ def align_dataset(
                 example['messages'][0]['content'] = "<image>" * image_len + example['messages'][0]['content']
         return example
     
-    dataset = dataset.map(
-        add_image_tag,
-        batched=True,
-        batch_size=data_args.preprocessing_batch_size,
-        **kwargs,
-    )
 
     column_names = list(next(iter(dataset)).keys())
     kwargs = {}
@@ -280,6 +274,13 @@ def align_dataset(
             load_from_cache_file=(not data_args.overwrite_cache) or (training_args.local_process_index != 0),
             desc="Converting format of dataset",
         )
+
+    dataset = dataset.map(
+        add_image_tag,
+        batched=True,
+        batch_size=data_args.preprocessing_batch_size,
+        **kwargs,
+    )
     dataset_converter = get_dataset_converter(dataset_attr.formatting, dataset_attr, data_args)
     return dataset.map(
         dataset_converter,
