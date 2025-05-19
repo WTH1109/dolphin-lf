@@ -4,7 +4,8 @@
     "subset": "r1_distillation_v1",
     "formatting": "sharegpt",
     "columns": {
-      "messages": "messages"
+      "messages": "messages",
+      "system": "system"
     },
     "tags": {
       "role_tag": "role",
@@ -18,7 +19,8 @@
     "subset": "r1_distillation_v2",
     "formatting": "sharegpt",
     "columns": {
-      "messages": "messages"
+      "messages": "messages",
+      "system": "system"
     },
     "tags": {
       "role_tag": "role",

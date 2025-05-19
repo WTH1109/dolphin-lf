@@ -57,13 +57,15 @@ def generate_configs(yaml_data: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
     for config in yaml_data['dataset_info']:
         config_name = config['config_name']
         has_images = False
+        has_system = False
         
         # 检查是否包含 images 字段
         for feature in config['features']:
             if 'images' in feature['name']:
                 if 'sequence' in feature and feature['sequence'] != 'null':
                     has_images = True
-                    break
+            if 'system' in feature['name'] and feature['dtype'] == 'string':
+                has_system = True
 
         config_dict = {
             "hf_hub_url": f"./datasets/huggingface/{yaml_data.get('repo_id', 'DolphinAI/UltrasoundBenchmark')}",
@@ -83,6 +85,8 @@ def generate_configs(yaml_data: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
         # 如果包含 images 则添加到 columns
         if has_images:
             config_dict["columns"]["images"] = "images"
+        if has_system:
+            config_dict["columns"]["system"] = "system"
         
         configs[config_name] = config_dict
     

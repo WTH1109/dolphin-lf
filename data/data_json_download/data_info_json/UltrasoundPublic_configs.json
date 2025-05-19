@@ -4,7 +4,8 @@
     "subset": "medical-o1-reasoning-SFT_en",
     "formatting": "sharegpt",
     "columns": {
-      "messages": "messages"
+      "messages": "messages",
+      "system": "system"
     },
     "tags": {
       "role_tag": "role",
@@ -18,7 +19,8 @@
     "subset": "medical-o1-reasoning-SFT_zh",
     "formatting": "sharegpt",
     "columns": {
-      "messages": "messages"
+      "messages": "messages",
+      "system": "system"
     },
     "tags": {
       "role_tag": "role",

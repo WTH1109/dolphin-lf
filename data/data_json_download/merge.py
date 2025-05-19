@@ -1,6 +1,8 @@
 import json
 import os
 
+import yaml
+
 # 假设有四个 JSON 文件路径
 json_files = [
     "basic.json",
@@ -63,16 +65,27 @@ if __name__ == "__main__":
     llm_dataset = 'llm_dataset='
     vlm_dataset = 'vlm_dataset='
 
+    with open(os.path.join(current_path, 'delete_dataset.json'), "r", encoding="utf-8") as f:
+        config_delete = yaml.safe_load(f)  # 安全加载（避免执行恶意代码）
+
     for key, config in llm_dataset_dic.items():
-        llm_dataset += f'{key},'
+        if key not in config_delete:
+            llm_dataset += f'{key},'
+        else:
+            print(f"删除数据集: {key}")
     for key, config in vlm_dataset_dic.items():
-        vlm_dataset += f'{key},'
+        if key not in config_delete:
+            vlm_dataset += f'{key},'
+        else:
+            print(f"删除数据集: {key}")
     llm_dataset = llm_dataset.rstrip(',')
     vlm_dataset = vlm_dataset.rstrip(',')
 
     with open(os.path.join(current_path, 'dataset.txt'), "w", encoding="utf-8") as f:
         f.write(llm_dataset + "\n")  # 写入LLM数据并换行
         f.write(vlm_dataset)    # 写入VLM数据
+
+    
     
     print(llm_dataset)
     print(vlm_dataset)

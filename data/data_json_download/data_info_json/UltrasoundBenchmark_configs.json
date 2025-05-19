@@ -20,7 +20,8 @@
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
-      "images": "images"
+      "images": "images",
+      "system": "system"
     },
     "tags": {
       "role_tag": "role",
