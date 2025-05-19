@@ -30,9 +30,9 @@
       "assistant_tag": "assistant"
     }
   },
-  "anatomy_qa": {
+  "anatomy_qa_new": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
-    "subset": "anatomy_qa",
+    "subset": "anatomy_qa_new",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",

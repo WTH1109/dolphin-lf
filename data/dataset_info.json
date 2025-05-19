@@ -39,9 +39,9 @@
       "assistant_tag": "assistant"
     }
   },
-  "anatomy_qa": {
+  "anatomy_qa_new": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
-    "subset": "anatomy_qa",
+    "subset": "anatomy_qa_new",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -731,21 +731,6 @@
   "teaching-material-12_caption-v1": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
     "subset": "teaching-material-12_caption-v1",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "messages",
-      "images": "images"
-    },
-    "tags": {
-      "role_tag": "role",
-      "content_tag": "content",
-      "user_tag": "user",
-      "assistant_tag": "assistant"
-    }
-  },
-  "teaching_material_001_illustration-v2": {
-    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
-    "subset": "teaching_material_001_illustration-v2",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
