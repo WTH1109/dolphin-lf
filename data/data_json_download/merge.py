@@ -83,7 +83,8 @@ if __name__ == "__main__":
 
     with open(os.path.join(current_path, 'dataset.txt'), "w", encoding="utf-8") as f:
         f.write(llm_dataset + "\n")  # 写入LLM数据并换行
-        f.write(vlm_dataset)    # 写入VLM数据
+        f.write(vlm_dataset + "\n")    # 写入VLM数据
+        f.write(vlm_dataset.split('=')[-1] + ',' + llm_dataset.split('=')[-1])    # 写入VLM数据
 
     
     
