@@ -311,8 +311,6 @@ def align_dataset(
             if example.get("images") is not None and example.get("messages") is not None:
                 image_len = len(example["images"]) if isinstance(example["images"], list) else 1
                 # image_place_holder_cnt = example['messages'][0]['content'].count("<image>")
-                if image_len > 7:
-                    return None
                 question = example['messages'][0]['content'].replace("<image>", "").strip()
                 answer = example['messages'][1]['content']
                 
@@ -325,6 +323,15 @@ def align_dataset(
             return example
         return example
     
+    def filter_images(example):
+        """过滤掉 images 数量超过 7 的样本"""
+        if example is None:
+            return False
+        if example.get("images") is not None:
+            image_len = len(example["images"]) if isinstance(example["images"], list) else 1
+            return image_len <= 7
+        return True
+
 
     column_names = list(next(iter(dataset)).keys())
     kwargs = {}
@@ -340,7 +347,8 @@ def align_dataset(
         batched=False,
         **kwargs,
     )
-    dataset = dataset.filter(lambda x: x is not None)
+
+    dataset = dataset.filter(filter_images, **kwargs)
 
     dataset_converter = get_dataset_converter(dataset_attr.formatting, dataset_attr, data_args)
     return dataset.map(
