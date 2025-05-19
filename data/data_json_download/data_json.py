@@ -66,7 +66,7 @@ def generate_configs(yaml_data: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
                     break
 
         config_dict = {
-            "hf_hub_url": f"./datasets/{yaml_data.get('repo_id', 'DolphinAI/UltrasoundBenchmark')}",
+            "hf_hub_url": f"./datasets/huggingface/{yaml_data.get('repo_id', 'DolphinAI/UltrasoundBenchmark')}",
             "subset": config_name,
             "formatting": "sharegpt",
             "columns": {

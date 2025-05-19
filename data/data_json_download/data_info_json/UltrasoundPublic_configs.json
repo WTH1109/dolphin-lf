@@ -1,6 +1,6 @@
 {
   "medical-o1-reasoning-SFT_en": {
-    "hf_hub_url": "./datasets/DolphinAI/UltrasoundPublic",
+    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundPublic",
     "subset": "medical-o1-reasoning-SFT_en",
     "formatting": "sharegpt",
     "columns": {
@@ -14,7 +14,7 @@
     }
   },
   "medical-o1-reasoning-SFT_zh": {
-    "hf_hub_url": "./datasets/DolphinAI/UltrasoundPublic",
+    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundPublic",
     "subset": "medical-o1-reasoning-SFT_zh",
     "formatting": "sharegpt",
     "columns": {
