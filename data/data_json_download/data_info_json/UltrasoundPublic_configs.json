@@ -1,0 +1,30 @@
+{
+  "medical-o1-reasoning-SFT_en": {
+    "hf_hub_url": "./datasets/DolphinAI/UltrasoundPublic",
+    "subset": "medical-o1-reasoning-SFT_en",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "medical-o1-reasoning-SFT_zh": {
+    "hf_hub_url": "./datasets/DolphinAI/UltrasoundPublic",
+    "subset": "medical-o1-reasoning-SFT_zh",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  }
+}

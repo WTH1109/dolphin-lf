@@ -15,10 +15,31 @@
 import os
 from abc import abstractmethod
 from dataclasses import dataclass
+import random
 from typing import TYPE_CHECKING, Any, Dict, List, Optional, Sequence, Type, Union
 
 from ..extras import logging
 from .data_utils import Role
+import json
+
+current_path = os.path.dirname(os.path.abspath(__file__))
+with open(os.path.join(current_path, 'question_map/describe_en.json'), 'r', encoding='utf-8') as f:
+    describe_en_map_list = json.load(f)
+
+with open(os.path.join(current_path, 'question_map/describe_zh.json'), 'r', encoding='utf-8') as f:
+    describe_zh_map_list = json.load(f)
+
+with open(os.path.join(current_path, 'question_map/ori_question_en.json'), 'r', encoding='utf-8') as f:
+    ori_question_en_map_list = json.load(f)
+
+with open(os.path.join(current_path, 'question_map/ori_question_zh.json'), 'r', encoding='utf-8') as f:
+    ori_question_zh_map_list = json.load(f)
+
+with open(os.path.join(current_path, 'question_map/len_en.json'), 'r', encoding='utf-8') as f:
+    len_en_list = json.load(f)
+
+with open(os.path.join(current_path, 'question_map/len_zh.json'), 'r', encoding='utf-8') as f:
+    len_zh_list = json.load(f)
 
 
 if TYPE_CHECKING:
@@ -253,16 +274,50 @@ def align_dataset(
         _audios: [],
     """
 
+    def detect_language(text):
+        # 统计中文字符数量
+        chinese_chars = sum(1 for char in text if '\u4e00' <= char <= '\u9fff' or '\u3000' <= char <= '\u303f')
+        # 统计英文字符数量（排除数字和符号）
+        english_chars = sum(1 for char in text if 'a' <= char.lower() <= 'z')
+        
+        if chinese_chars > english_chars:
+            return "Chinese"
+        elif english_chars > chinese_chars:
+            return "English"
+        else:
+            return "Mixed/Unknown"  # 中英混合或无法判断
+    
+    def refine_question(question, answer):
+        if question in ori_question_en_map_list:
+            rf_question = random.choice(describe_en_map_list)
+            if len(answer.split()) < 20:
+                return rf_question + random.choice(len_en_list)
+            else:
+                return rf_question
+        elif question in ori_question_zh_map_list:
+            rf_question = random.choice(describe_zh_map_list)
+            if len(answer) < 30:
+                return rf_question + random.choice(len_zh_list)
+            else:
+                return rf_question
+        else:
+            return question
+
     def add_image_tag(example):
         """
         Adds <image> tag to the prompt if the example contains an image.
         """
-        if example.get("image") is not None and example.get("messages") is not None:
-            image_len = len(example["image"]) if isinstance(example["image"], list) else 1
-            image_place_holder_cnt = example['messages'][0]['content'].count("<image>")
-            if image_place_holder_cnt != image_len:
-                example['messages'][0]['content'].replace("<image>", "")
-                example['messages'][0]['content'] = "<image>" * image_len + example['messages'][0]['content']
+        if example.get("images") is not None and example.get("messages") is not None:
+            image_len = len(example["images"]) if isinstance(example["images"], list) else 1
+            # image_place_holder_cnt = example['messages'][0]['content'].count("<image>")
+            if image_len > 7:
+                return None
+            question = example['messages'][0]['content'].replace("<image>", "").strip()
+            answer = example['messages'][1]['content']
+            
+            question = refine_question(question, answer)
+
+            example['messages'][0]['content'] = "<image>" * image_len + question
         return example
     
 
@@ -277,10 +332,11 @@ def align_dataset(
 
     dataset = dataset.map(
         add_image_tag,
-        batched=True,
-        batch_size=data_args.preprocessing_batch_size,
+        batched=False,
         **kwargs,
     )
+    dataset = dataset.filter(lambda x: x is not None)
+
     dataset_converter = get_dataset_converter(dataset_attr.formatting, dataset_attr, data_args)
     return dataset.map(
         dataset_converter,

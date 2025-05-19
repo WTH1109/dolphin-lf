@@ -1,0 +1,12 @@
+{
+    "cp500/ultrasound-samples": {
+        "hf_hub_url": "./data/huggingface/cp500/ultrasound-samples"
+    },
+
+    "Ka4on/ultrasound_train": {
+        "hf_hub_url": "./data/huggingface/Ka4on/ultrasound_train"
+    },
+    "identity": {
+        "file_name": "identity.json"
+    }
+}

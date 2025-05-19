@@ -1,0 +1,30 @@
+{
+  "r1_distillation_v1": {
+    "hf_hub_url": "./datasets/DolphinAI/UltrasoundDistillation",
+    "subset": "r1_distillation_v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "r1_distillation_v2": {
+    "hf_hub_url": "./datasets/DolphinAI/UltrasoundDistillation",
+    "subset": "r1_distillation_v2",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  }
+}
