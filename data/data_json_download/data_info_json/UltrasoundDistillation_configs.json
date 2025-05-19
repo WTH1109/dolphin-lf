@@ -1,6 +1,6 @@
 {
   "r1_distillation_v1": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundDistillation",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundDistillation",
     "subset": "r1_distillation_v1",
     "formatting": "sharegpt",
     "columns": {
@@ -15,7 +15,7 @@
     }
   },
   "r1_distillation_v2": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundDistillation",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundDistillation",
     "subset": "r1_distillation_v2",
     "formatting": "sharegpt",
     "columns": {

@@ -1,6 +1,6 @@
 {
   "39_ultrasound_report": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "39_ultrasound_report",
     "formatting": "sharegpt",
     "columns": {
@@ -15,7 +15,7 @@
     }
   },
   "anatomy_cls_new": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "anatomy_cls_new",
     "formatting": "sharegpt",
     "columns": {
@@ -31,7 +31,7 @@
     }
   },
   "anatomy_qa": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "anatomy_qa",
     "formatting": "sharegpt",
     "columns": {
@@ -46,7 +46,7 @@
     }
   },
   "benchmark_qa_03": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_03",
     "formatting": "sharegpt",
     "columns": {
@@ -61,7 +61,7 @@
     }
   },
   "benchmark_qa_04_detection": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_04_detection",
     "formatting": "sharegpt",
     "columns": {
@@ -76,7 +76,7 @@
     }
   },
   "benchmark_qa_10": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_10",
     "formatting": "sharegpt",
     "columns": {
@@ -91,7 +91,7 @@
     }
   },
   "benchmark_qa_18_new": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_18_new",
     "formatting": "sharegpt",
     "columns": {
@@ -106,7 +106,7 @@
     }
   },
   "benchmark_qa_21": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_21",
     "formatting": "sharegpt",
     "columns": {
@@ -121,7 +121,7 @@
     }
   },
   "benchmark_qa_23_new": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_23_new",
     "formatting": "sharegpt",
     "columns": {
@@ -136,7 +136,7 @@
     }
   },
   "benchmark_qa_25": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_25",
     "formatting": "sharegpt",
     "columns": {
@@ -151,7 +151,7 @@
     }
   },
   "benchmark_qa_28_class_new": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_28_class_new",
     "formatting": "sharegpt",
     "columns": {
@@ -166,7 +166,7 @@
     }
   },
   "benchmark_qa_28_new": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_28_new",
     "formatting": "sharegpt",
     "columns": {
@@ -181,7 +181,7 @@
     }
   },
   "benchmark_qa_32": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_32",
     "formatting": "sharegpt",
     "columns": {
@@ -196,7 +196,7 @@
     }
   },
   "benchmark_qa_37": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_37",
     "formatting": "sharegpt",
     "columns": {
@@ -211,7 +211,7 @@
     }
   },
   "benchmark_qa_40": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_40",
     "formatting": "sharegpt",
     "columns": {
@@ -226,7 +226,7 @@
     }
   },
   "benchmark_qa_42": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_42",
     "formatting": "sharegpt",
     "columns": {
@@ -241,7 +241,7 @@
     }
   },
   "benchmark_qa_44": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_44",
     "formatting": "sharegpt",
     "columns": {
@@ -256,7 +256,7 @@
     }
   },
   "benchmark_qa_50_new": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_50_new",
     "formatting": "sharegpt",
     "columns": {
@@ -271,7 +271,7 @@
     }
   },
   "benchmark_qa_53": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_53",
     "formatting": "sharegpt",
     "columns": {
@@ -286,7 +286,7 @@
     }
   },
   "benchmark_qa_66": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_66",
     "formatting": "sharegpt",
     "columns": {
@@ -301,7 +301,7 @@
     }
   },
   "benchmark_qa_69": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_69",
     "formatting": "sharegpt",
     "columns": {
@@ -316,7 +316,7 @@
     }
   },
   "benchmark_qa_70": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_70",
     "formatting": "sharegpt",
     "columns": {
@@ -331,7 +331,7 @@
     }
   },
   "benchmark_qa_74_normal": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_74_normal",
     "formatting": "sharegpt",
     "columns": {
@@ -346,7 +346,7 @@
     }
   },
   "benchmark_qa_74_visible": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_74_visible",
     "formatting": "sharegpt",
     "columns": {
@@ -361,7 +361,7 @@
     }
   },
   "benchmark_qa_75": {
-    "hf_hub_url": "./datasets/huggingface/DolphinAI/UltrasoundBenchmark",
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "benchmark_qa_75",
     "formatting": "sharegpt",
     "columns": {

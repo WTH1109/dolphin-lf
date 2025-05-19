@@ -68,7 +68,7 @@ def generate_configs(yaml_data: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
                 has_system = True
 
         config_dict = {
-            "hf_hub_url": f"./datasets/huggingface/{yaml_data.get('repo_id', 'DolphinAI/UltrasoundBenchmark')}",
+            "hf_hub_url": f"./data/huggingface/{yaml_data.get('repo_id', 'DolphinAI/UltrasoundBenchmark')}",
             "subset": config_name,
             "formatting": "sharegpt",
             "columns": {
