@@ -307,17 +307,22 @@ def align_dataset(
         """
         Adds <image> tag to the prompt if the example contains an image.
         """
-        if example.get("images") is not None and example.get("messages") is not None:
-            image_len = len(example["images"]) if isinstance(example["images"], list) else 1
-            # image_place_holder_cnt = example['messages'][0]['content'].count("<image>")
-            if image_len > 7:
-                return None
-            question = example['messages'][0]['content'].replace("<image>", "").strip()
-            answer = example['messages'][1]['content']
-            
-            question = refine_question(question, answer)
+        try:
+            if example.get("images") is not None and example.get("messages") is not None:
+                image_len = len(example["images"]) if isinstance(example["images"], list) else 1
+                # image_place_holder_cnt = example['messages'][0]['content'].count("<image>")
+                if image_len > 7:
+                    return None
+                question = example['messages'][0]['content'].replace("<image>", "").strip()
+                answer = example['messages'][1]['content']
+                
+                question = refine_question(question, answer)
 
-            example['messages'][0]['content'] = "<image>" * image_len + question
+                example['messages'][0]['content'] = "<image>" * image_len + question
+        except TypeError:
+            print("TypeError: ")
+            print(example)
+            return example
         return example
     
 
