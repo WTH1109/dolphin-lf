@@ -311,12 +311,12 @@ def align_dataset(
         if example.get("_prompt") is not None and example.get("_images") is not None and len(example["_images"]) != 0:
             image_len = len(example["_images"]) if isinstance(example["_images"], list) else 1
             # image_place_holder_cnt = example['messages'][0]['content'].count("<image>")
-            question = example['_prompt'].replace("<image>", "").strip()
-            answer = example['_response']
+            question = example['_prompt'][0]['content'].replace("<image>", "").strip()
+            answer = example['_response'][0]['content']
             
             question = refine_question(question, answer)
 
-            example['_prompt'] = "<image>" * image_len + question
+            example['_prompt'][0]['content'] = "<image>" * image_len + question
 
         return example
     
