@@ -1,7 +1,7 @@
 {
-  "r1_distillation_v1": {
+  "r1_distillation_v1_new": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundDistillation",
-    "subset": "r1_distillation_v1",
+    "subset": "r1_distillation_v1_new",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -14,9 +14,9 @@
       "assistant_tag": "assistant"
     }
   },
-  "r1_distillation_v2": {
+  "r1_distillation_v2_new": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundDistillation",
-    "subset": "r1_distillation_v2",
+    "subset": "r1_distillation_v2_new",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",

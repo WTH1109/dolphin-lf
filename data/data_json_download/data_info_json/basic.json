@@ -31,13 +31,6 @@
             "messages": "conversations"
         }
     },
-    "ShareGPT_CE": {
-        "hf_hub_url": "./data/huggingface/shareAI/ShareGPT-Chinese-English-90k",
-        "formatting": "sharegpt",
-        "columns": {
-            "messages": "conversations"
-        }
-    },
     "llava_sharegpt4o": {
         "hf_hub_url": "./data/huggingface/lmms-lab/LLaVA-OneVision-Data",
         "subset": "sharegpt4o",

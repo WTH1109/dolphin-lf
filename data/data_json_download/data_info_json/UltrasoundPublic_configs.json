@@ -1,4 +1,18 @@
 {
+  "Chinese-medical-dialogue": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundPublic",
+    "subset": "Chinese-medical-dialogue",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "medical-o1-reasoning-SFT_en": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundPublic",
     "subset": "medical-o1-reasoning-SFT_en",
@@ -21,6 +35,20 @@
     "columns": {
       "messages": "messages",
       "system": "system"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "sharegpt-zh-en": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundPublic",
+    "subset": "sharegpt-zh-en",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
     },
     "tags": {
       "role_tag": "role",
