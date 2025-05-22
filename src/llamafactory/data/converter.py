@@ -307,28 +307,25 @@ def align_dataset(
         """
         Adds <image> tag to the prompt if the example contains an image.
         """
-        try:
-            if example.get("images") is not None and example.get("messages") is not None:
-                image_len = len(example["images"]) if isinstance(example["images"], list) else 1
-                # image_place_holder_cnt = example['messages'][0]['content'].count("<image>")
-                question = example['messages'][0]['content'].replace("<image>", "").strip()
-                answer = example['messages'][1]['content']
-                
-                question = refine_question(question, answer)
 
-                example['messages'][0]['content'] = "<image>" * image_len + question
-        except TypeError:
-            print("TypeError: ")
-            print(example)
-            return example
+        if example.get("_prompt") is not None and example.get("_images") is not None and len(example["_images"]) != 0:
+            image_len = len(example["_images"]) if isinstance(example["_images"], list) else 1
+            # image_place_holder_cnt = example['messages'][0]['content'].count("<image>")
+            question = example['_prompt'].replace("<image>", "").strip()
+            answer = example['_response']
+            
+            question = refine_question(question, answer)
+
+            example['_prompt'] = "<image>" * image_len + question
+
         return example
     
     def filter_images(example):
         """过滤掉 images 数量超过 7 的样本"""
         if example is None:
             return False
-        if example.get("images") is not None:
-            image_len = len(example["images"]) if isinstance(example["images"], list) else 1
+        if example.get("_images") is not None and len(example["_images"]) != 0:
+            image_len = len(example["_images"]) if isinstance(example["_images"], list) else 1
             return image_len <= 7
         return True
 
@@ -342,6 +339,15 @@ def align_dataset(
             desc="Converting format of dataset",
         )
 
+    dataset_converter = get_dataset_converter(dataset_attr.formatting, dataset_attr, data_args)
+
+    dataset = dataset.map(
+        dataset_converter,
+        batched=False,
+        remove_columns=column_names,
+        **kwargs,
+    )
+
     dataset = dataset.map(
         add_image_tag,
         batched=False,
@@ -350,10 +356,5 @@ def align_dataset(
 
     dataset = dataset.filter(filter_images, **kwargs)
 
-    dataset_converter = get_dataset_converter(dataset_attr.formatting, dataset_attr, data_args)
-    return dataset.map(
-        dataset_converter,
-        batched=False,
-        remove_columns=column_names,
-        **kwargs,
-    )
+    
+    return dataset

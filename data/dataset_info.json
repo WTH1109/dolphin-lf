@@ -8,6 +8,98 @@
   "identity": {
     "file_name": "identity.json"
   },
+  "autoif_4omini": {
+    "file_name": "/mnt/nlp-ali/usr/data/sft/autoif/4omini_sharegpt.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "system": "system"
+    }
+  },
+  "alpaca_gpt4_zh": {
+    "file_name": "/mnt/nlp-ali/usr/data/sft/llamafactory___alpaca_gpt4_zh/alpaca_gpt4_data_zh-sharegpt.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations"
+    }
+  },
+  "ruozhiba_gpt4": {
+    "file_name": "/mnt/nlp-ali/usr/data/sft/ruozhiba_gpt4/ruozhiba_qa2449_gpt4o-sharegpt.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations"
+    }
+  },
+  "ShareGPT_CE": {
+    "hf_hub_url": "./data/huggingface/shareAI/ShareGPT-Chinese-English-90k",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations"
+    }
+  },
+  "llava_sharegpt4o": {
+    "hf_hub_url": "./data/huggingface/lmms-lab/LLaVA-OneVision-Data",
+    "subset": "sharegpt4o",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "image"
+    }
+  },
+  "llava_sharegpt4v(coco)": {
+    "hf_hub_url": "./data/huggingface/lmms-lab/LLaVA-OneVision-Data",
+    "subset": "sharegpt4v(coco)",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "image"
+    }
+  },
+  "llava_sharegpt4v(llava)": {
+    "hf_hub_url": "./data/huggingface/lmms-lab/LLaVA-OneVision-Data",
+    "subset": "sharegpt4v(llava)",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "image"
+    }
+  },
+  "llava_sharegpt4v(sam)": {
+    "hf_hub_url": "./data/huggingface/lmms-lab/LLaVA-OneVision-Data",
+    "subset": "sharegpt4v(sam)",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "image"
+    }
+  },
+  "llava_textocr(gpt4v)": {
+    "hf_hub_url": "./data/huggingface/lmms-lab/LLaVA-OneVision-Data",
+    "subset": "textocr(gpt4v)",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "image"
+    }
+  },
+  "llava_Geometry3K": {
+    "hf_hub_url": "./data/huggingface/lmms-lab/LLaVA-OneVision-Data",
+    "subset": "Geometry3K(MathV360K)",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "image"
+    }
+  },
+  "llava_chartqa": {
+    "hf_hub_url": "./data/huggingface/lmms-lab/LLaVA-OneVision-Data",
+    "subset": "chartqa(cauldron,llava_format)",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "image"
+    }
+  },
   "39_ultrasound_report": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "39_ultrasound_report",
