@@ -41,7 +41,7 @@ def classify_datasets(merged_data):
             continue
             
         # 检查 columns 中是否包含 images
-        if "images" in config["columns"].values():
+        if "images" in config["columns"].keys():
             vlm_dataset[key] = config
         else:
             llm_dataset[key] = config
