@@ -822,9 +822,9 @@
       "assistant_tag": "assistant"
     }
   },
-  "sharegpt-zh-en": {
+  "sharegpt-zh-en_new": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundPublic",
-    "subset": "sharegpt-zh-en",
+    "subset": "sharegpt-zh-en_new",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
