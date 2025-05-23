@@ -62,8 +62,8 @@ if __name__ == "__main__":
     # 2. 分类数据集
     llm_dataset_dic, vlm_dataset_dic = classify_datasets(merged_data)
 
-    llm_dataset = 'llm_dataset='
-    vlm_dataset = 'vlm_dataset='
+    llm_dataset = 'llm_dataset="'
+    vlm_dataset = 'vlm_dataset="'
 
     with open(os.path.join(current_path, 'delete_dataset.json'), "r", encoding="utf-8") as f:
         config_delete = yaml.safe_load(f)  # 安全加载（避免执行恶意代码）
@@ -82,9 +82,9 @@ if __name__ == "__main__":
     vlm_dataset = vlm_dataset.rstrip(',')
 
     with open(os.path.join(current_path, 'dataset.txt'), "w", encoding="utf-8") as f:
-        f.write(llm_dataset + "\n")  # 写入LLM数据并换行
-        f.write(vlm_dataset + "\n")    # 写入VLM数据
-        f.write(vlm_dataset.split('=')[-1] + ',' + llm_dataset.split('=')[-1])    # 写入VLM数据
+        f.write(llm_dataset + '"\n')  # 写入LLM数据并换行
+        f.write(vlm_dataset + '"\n')    # 写入VLM数据
+        f.write(vlm_dataset.split('=')[-1].removeprefix('"') + ',' + llm_dataset.split('=')[-1].removeprefix('"'))    # 写入VLM数据
 
     
     
