@@ -191,9 +191,9 @@ def _get_merged_dataset(
             f.write("## 数据集统计信息\n\n")
             
             for name, size in dataset_stats.items():
-                f.write(f"- {name}: \t{size/10000}.2fw({size/total_size*100:.2f}%)\n")
+                f.write(f"- {name}: \t\t{size/10000}({size/total_size*100:.2f}%)\n")
             if merge:
-                f.write(f"\n合并后总样本数: {total_size/10000}.2fw条\n")
+                f.write(f"\n合并后总样本数: {total_size/10000}w条\n")
 
     if merge:
         return merge_dataset(list(datasets.values()), data_args, seed=training_args.seed)
