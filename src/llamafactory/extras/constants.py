@@ -50,7 +50,7 @@ FILEEXT2TYPE = {
 
 IGNORE_INDEX = -100
 
-IMAGE_PLACEHOLDER = os.environ.get("IMAGE_PLACEHOLDER", "<image>")
+IMAGE_PLACEHOLDER = os.environ.get("IMAGE_PLACEHOLDER", "<df_image_placeholder>")
 
 LAYERNORM_NAMES = {"norm", "ln"}
 
@@ -89,7 +89,7 @@ SUPPORTED_CLASS_FOR_S2ATTN = {"llama"}
 
 SWANLAB_CONFIG = "swanlab_public_config.json"
 
-VIDEO_PLACEHOLDER = os.environ.get("VIDEO_PLACEHOLDER", "<video>")
+VIDEO_PLACEHOLDER = os.environ.get("VIDEO_PLACEHOLDER", "<df_video_placeholder>")
 
 V_HEAD_WEIGHTS_NAME = "value_head.bin"
 

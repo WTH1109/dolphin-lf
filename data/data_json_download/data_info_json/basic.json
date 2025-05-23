@@ -93,5 +93,14 @@
           "messages": "conversations",
           "images": "image"
         }
+    },
+    "llava_scienceqa": {
+        "hf_hub_url": "./data/huggingface/lmms-lab/LLaVA-OneVision-Data",
+        "subset": "scienceqa(cauldron,llava_format)",
+        "formatting": "sharegpt",
+        "columns": {
+          "messages": "conversations",
+          "images": "image"
+        }
     }
 }

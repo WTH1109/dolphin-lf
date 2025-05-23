@@ -316,7 +316,11 @@ def align_dataset(
             
             question = refine_question(question, answer)
 
-            example['_prompt'][0]['content'] = "<image>" * image_len + question
+            example['_prompt'][0]['content'] = "<df_image_placeholder>" * image_len + question
+
+        if example.get("_prompt") is not None and example.get("_videos") is not None and len(example["_videos"]) != 0:
+            image_len = len(example["_videos"]) if isinstance(example["_videos"], list) else 1
+            example['_prompt'][0]['content'] = "<df_video_placeholder>" * image_len + question
 
         return example
     

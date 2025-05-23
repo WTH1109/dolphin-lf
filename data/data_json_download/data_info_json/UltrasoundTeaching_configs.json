@@ -133,6 +133,21 @@
       "assistant_tag": "assistant"
     }
   },
+  "teaching-material-05_illustration-v2": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-05_illustration-v2",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "teaching-material-06_caption-v1": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
     "subset": "teaching-material-06_caption-v1",
