@@ -173,11 +173,26 @@ def _get_merged_dataset(
         return None
 
     datasets = {}
+    dataset_stats = {}  # 用于存储数据集统计信息
+
     for dataset_name, dataset_attr in zip(dataset_names, get_dataset_list(dataset_names, data_args.dataset_dir)):
         if (stage == "rm" and dataset_attr.ranking is False) or (stage != "rm" and dataset_attr.ranking is True):
             raise ValueError("The dataset is not applicable in the current training stage.")
 
-        datasets[dataset_name] = _load_single_dataset(dataset_attr, model_args, data_args, training_args)
+        dataset = _load_single_dataset(dataset_attr, model_args, data_args, training_args)
+        datasets[dataset_name] = dataset
+        dataset_stats[dataset_name] = len(dataset)  # 记录数据集长度
+
+    # 保存数据集统计信息
+    if training_args.should_save:
+        stats_file = os.path.join(training_args.output_dir, "dataset_info.txt")
+        with open(stats_file, "w", encoding="utf-8") as f:
+            f.write("## 数据集统计信息\n\n")
+            for name, size in dataset_stats.items():
+                f.write(f"- {name}: {size/10000}w条样本\n")
+            if merge:
+                total_size = sum(dataset_stats.values())
+                f.write(f"\n合并后总样本数: {total_size/10000}w条\n")
 
     if merge:
         return merge_dataset(list(datasets.values()), data_args, seed=training_args.seed)
