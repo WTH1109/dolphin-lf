@@ -40,33 +40,7 @@
           "images": "image"
         }
     },
-    "llava_sharegpt4v(coco)": {
-        "hf_hub_url": "./data/huggingface/lmms-lab/LLaVA-OneVision-Data",
-        "subset": "sharegpt4v(coco)",
-        "formatting": "sharegpt",
-        "columns": {
-          "messages": "conversations",
-          "images": "image"
-        }
-    },
-    "llava_sharegpt4v(llava)": {
-        "hf_hub_url": "./data/huggingface/lmms-lab/LLaVA-OneVision-Data",
-        "subset": "sharegpt4v(llava)",
-        "formatting": "sharegpt",
-        "columns": {
-          "messages": "conversations",
-          "images": "image"
-        }
-    },
-    "llava_sharegpt4v(sam)": {
-        "hf_hub_url": "./data/huggingface/lmms-lab/LLaVA-OneVision-Data",
-        "subset": "sharegpt4v(sam)",
-        "formatting": "sharegpt",
-        "columns": {
-          "messages": "conversations",
-          "images": "image"
-        }
-    },
+
     "llava_textocr(gpt4v)": {
         "hf_hub_url": "./data/huggingface/lmms-lab/LLaVA-OneVision-Data",
         "subset": "textocr(gpt4v)",

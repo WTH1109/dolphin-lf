@@ -185,6 +185,7 @@ def _get_merged_dataset(
 
     # 保存数据集统计信息
     if training_args.should_save:
+        os.makedirs(training_args.output_dir, exist_ok=True)
         stats_file = os.path.join(training_args.output_dir, "dataset_info.txt")
         total_size = sum(dataset_stats.values())
         with open(stats_file, "w", encoding="utf-8") as f:
