@@ -74,7 +74,11 @@ if __name__ == "__main__":
         else:
             print(f"删除数据集: {key}")
     for key, config in vlm_dataset_dic.items():
-        if key not in config_delete:
+        delete = False
+        for deleta_config in config_delete:
+            if deleta_config in key:
+                delete = True
+        if not delete:
             vlm_dataset += f'{key},'
         else:
             print(f"删除数据集: {key}")
