@@ -90,9 +90,9 @@
       "assistant_tag": "assistant"
     }
   },
-  "anatomy_cls_new": {
+  "anatomy_cls_new2": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
-    "subset": "anatomy_cls_new",
+    "subset": "anatomy_cls_new2",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -106,9 +106,9 @@
       "assistant_tag": "assistant"
     }
   },
-  "anatomy_qa_new": {
+  "anatomy_qa_new2": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
-    "subset": "anatomy_qa_new",
+    "subset": "anatomy_qa_new2",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -361,9 +361,9 @@
       "assistant_tag": "assistant"
     }
   },
-  "benchmark_qa_28_class_new": {
+  "benchmark_qa_28_class_new2": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
-    "subset": "benchmark_qa_28_class_new",
+    "subset": "benchmark_qa_28_class_new2",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -376,9 +376,9 @@
       "assistant_tag": "assistant"
     }
   },
-  "benchmark_qa_28_new": {
+  "benchmark_qa_28_new2": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
-    "subset": "benchmark_qa_28_new",
+    "subset": "benchmark_qa_28_new2",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -929,6 +929,20 @@
       "assistant_tag": "assistant"
     }
   },
+  "teaching-material-00-report-v1": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-00-report-v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "teaching-material-01_caption-v1": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
     "subset": "teaching-material-01_caption-v1",
@@ -973,6 +987,36 @@
       "assistant_tag": "assistant"
     }
   },
+  "teaching-material-02-illustration-v2": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-02-illustration-v2",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "teaching-material-02-illustration-v3": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-02-illustration-v3",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "teaching-material-02_caption-v1": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
     "subset": "teaching-material-02_caption-v1",
@@ -988,9 +1032,54 @@
       "assistant_tag": "assistant"
     }
   },
+  "teaching-material-03-illustration-v3": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-03-illustration-v3",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "teaching-material-03_caption-v1": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
     "subset": "teaching-material-03_caption-v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "teaching-material-03_illustration-v2": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-03_illustration-v2",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "teaching-material-04-case-v3": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-04-case-v3",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -1123,6 +1212,21 @@
       "assistant_tag": "assistant"
     }
   },
+  "teaching-material-07-illustration-v3": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-07-illustration-v3",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "teaching-material-07_caption-v1": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
     "subset": "teaching-material-07_caption-v1",
@@ -1213,6 +1317,21 @@
       "assistant_tag": "assistant"
     }
   },
+  "teaching-material-10-illustration-v3": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-10-illustration-v3",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "teaching-material-10_caption-v1": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
     "subset": "teaching-material-10_caption-v1",
@@ -1258,6 +1377,21 @@
       "assistant_tag": "assistant"
     }
   },
+  "teaching-material-11-illustration-v3": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-11-illustration-v3",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "teaching-material-11_caption-v1": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
     "subset": "teaching-material-11_caption-v1",
@@ -1288,6 +1422,21 @@
       "assistant_tag": "assistant"
     }
   },
+  "teaching-material-12-illustration-v3": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-12-illustration-v3",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "teaching-material-12_caption-v1": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
     "subset": "teaching-material-12_caption-v1",
@@ -1306,6 +1455,21 @@
   "teaching-material-12_illustration-v2": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
     "subset": "teaching-material-12_illustration-v2",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "teaching-material-14-anatomical-v1": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-14-anatomical-v1",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
