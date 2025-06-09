@@ -75,6 +75,21 @@
       "images": "image"
     }
   },
+  "yc_revision_01": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
+    "subset": "data_revisions_combined",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "39_ultrasound_report": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "39_ultrasound_report",
@@ -1474,6 +1489,20 @@
     "columns": {
       "messages": "messages",
       "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "teaching-material-15-ab-v1": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-15-ab-v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
     },
     "tags": {
       "role_tag": "role",
