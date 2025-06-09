@@ -277,7 +277,7 @@ def _get_preprocessed_dataset(
     dataset = dataset.map(
         dataset_processor.preprocess_dataset,
         batched=True,
-        batch_size=data_args.preprocessing_batch_size,
+        batch_size=16,
         remove_columns=column_names,
         **kwargs,
     )
