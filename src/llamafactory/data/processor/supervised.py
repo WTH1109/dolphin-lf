@@ -86,33 +86,38 @@ class SupervisedDatasetProcessor(DatasetProcessor):
         return input_ids, labels
 
     def preprocess_dataset(self, examples: Dict[str, List[Any]]) -> Dict[str, List[Any]]:
-        # build inputs with format `<bos> X Y <eos>` and labels with format `<ignore> ... <ignore> Y <eos>`
-        # for multiturn examples, we only mask the prompt part in each prompt-response pair.
-        model_inputs = defaultdict(list)
-        for i in range(len(examples["_prompt"])):
-            if len(examples["_prompt"][i]) % 2 != 1 or len(examples["_response"][i]) != 1:
-                logger.warning_rank0(
-                    "Dropped invalid example: {}".format(examples["_prompt"][i] + examples["_response"][i])
+        field_names = ["input_ids", "attention_mask", "labels", "images", "videos", "audios"]
+        try:
+            model_inputs = {k: [] for k in field_names}
+            for i in range(len(examples["_prompt"])):
+                if len(examples["_prompt"][i]) % 2 != 1 or len(examples["_response"][i]) != 1:
+                    logger.warning_rank0(
+                        "Dropped invalid example: {}".format(examples["_prompt"][i] + examples["_response"][i])
+                    )
+                    continue
+
+                input_ids, labels = self._encode_data_example(
+                    prompt=examples["_prompt"][i],
+                    response=examples["_response"][i],
+                    system=examples["_system"][i],
+                    tools=examples["_tools"][i],
+                    images=examples["_images"][i] or [],
+                    videos=examples["_videos"][i] or [],
+                    audios=examples["_audios"][i] or [],
                 )
-                continue
+                model_inputs["input_ids"].append(input_ids)
+                model_inputs["attention_mask"].append([1] * len(input_ids))
+                model_inputs["labels"].append(labels)
+                model_inputs["images"].append(examples["_images"][i])
+                model_inputs["videos"].append(examples["_videos"][i])
+                model_inputs["audios"].append(examples["_audios"][i])
 
-            input_ids, labels = self._encode_data_example(
-                prompt=examples["_prompt"][i],
-                response=examples["_response"][i],
-                system=examples["_system"][i],
-                tools=examples["_tools"][i],
-                images=examples["_images"][i] or [],
-                videos=examples["_videos"][i] or [],
-                audios=examples["_audios"][i] or [],
-            )
-            model_inputs["input_ids"].append(input_ids)
-            model_inputs["attention_mask"].append([1] * len(input_ids))
-            model_inputs["labels"].append(labels)
-            model_inputs["images"].append(examples["_images"][i])
-            model_inputs["videos"].append(examples["_videos"][i])
-            model_inputs["audios"].append(examples["_audios"][i])
+            return model_inputs
+        except Exception as e:
+            logger.warning_rank0(f"Exception in batch: {e}")
+            # 返回所有字段空list代表“本batch完全丢弃”
+            return {k: [] for k in field_names}
 
-        return model_inputs
 
     def print_data_example(self, example: Dict[str, List[int]]) -> None:
         valid_labels = list(filter(lambda x: x != IGNORE_INDEX, example["labels"]))
