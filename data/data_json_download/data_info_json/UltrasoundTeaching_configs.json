@@ -551,5 +551,19 @@
       "user_tag": "user",
       "assistant_tag": "assistant"
     }
+  },
+  "teaching-material-15-ab-v1": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundTeaching",
+    "subset": "teaching-material-15-ab-v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
   }
 }

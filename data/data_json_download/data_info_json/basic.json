@@ -76,5 +76,20 @@
           "messages": "conversations",
           "images": "image"
         }
+    },
+    "yc_revision_01": {
+        "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
+        "subset": "data_revisions_combined",
+        "formatting": "sharegpt",
+        "columns": {
+        "messages": "messages",
+        "images": "images"
+        },
+        "tags": {
+        "role_tag": "role",
+        "content_tag": "content",
+        "user_tag": "user",
+        "assistant_tag": "assistant"
+        }
     }
 }

@@ -55,6 +55,7 @@ def generate_configs(yaml_data: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
         raise ValueError("YAML 数据中缺少 'dataset_info' 部分")
     
     for config in yaml_data['dataset_info']:
+        import pdb; pdb.set_trace()
         config_name = config['config_name']
         has_images = False
         has_system = False
@@ -119,12 +120,13 @@ def main(repo_id: str = "DolphinAI/UltrasoundBenchmark"):
 if __name__ == "__main__":
     # 使用示例（可以替换为你想要的数据集）
     dataset_list = [
-        'DolphinAI/UltrasoundBenchmark',
-        'DolphinAI/UltrasoundTeaching',
-        'DolphinAI/UltrasoundDistillation',
-        'DolphinAI/UltrasoundPublic',
-        'DolphinAI/BenchmarkZH',
-        'DolphinAI/Pascal'
+        # 'DolphinAI/UltrasoundBenchmark',
+        # 'DolphinAI/UltrasoundTeaching',
+        # 'DolphinAI/UltrasoundDistillation',
+        # 'DolphinAI/UltrasoundPublic',
+        # 'DolphinAI/BenchmarkZH',
+        # 'DolphinAI/Pascal',
+        'DolphinAI/BenchmarkDistillation'
     ]
 
     for dataset in dataset_list:
