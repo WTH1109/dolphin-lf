@@ -78,7 +78,7 @@
         }
     },
     "yc_revision_01": {
-        "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
+        "hf_hub_url": "./data/huggingface/DolphinAI/DataRevision",
         "subset": "data_revisions_combined",
         "formatting": "sharegpt",
         "columns": {

@@ -1,9 +1,11 @@
 [
     "anatomy_cls_new",
     "Chinese-medical-dialogue",
+    "caption",
     "autoif_4omini",
     "llava_sharegpt4o",
     "benchmark_qa_39_report",
     "39_ultrasound_report",
+    "Pascal_04",
     "sharegpt-zh-en_new"
 ]
