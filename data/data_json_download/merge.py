@@ -12,6 +12,7 @@ json_files = [
     "UltrasoundTeaching_configs.json",
     "BenchmarkZH_configs.json",
     "Pascal_configs.json",
+    "BenchmarkDistillation_configs.json"
 ]
 
 def load_and_merge_jsons(file_paths):

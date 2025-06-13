@@ -83,6 +83,22 @@
         "formatting": "sharegpt",
         "columns": {
         "messages": "messages",
+        "images": "images",
+        "system": "system"
+        },
+        "tags": {
+        "role_tag": "role",
+        "content_tag": "content",
+        "user_tag": "user",
+        "assistant_tag": "assistant"
+        }
+    },
+    "18_medical_talk":{
+        "hf_hub_url": "./data/huggingface/DolphinAI/MedicalTalk",
+        "subset": "18_medical_talk",
+        "formatting": "sharegpt",
+        "columns": {
+        "messages": "messages",
         "images": "images"
         },
         "tags": {

@@ -126,7 +126,7 @@ class AlpacaDatasetConverter(DatasetConverter):
         output = {
             "_prompt": prompt,
             "_response": response,
-            "_system": example[self.dataset_attr.system] if self.dataset_attr.system else "",
+            "_system": example[self.dataset_attr.system] if self.dataset_attr.system else "As a student, please learn the following image-text Q&A and responses.",
             "_tools": example[self.dataset_attr.tools] if self.dataset_attr.tools else "",
             "_images": self._find_medias(example[self.dataset_attr.images]) if self.dataset_attr.images else None,
             "_videos": self._find_medias(example[self.dataset_attr.videos]) if self.dataset_attr.videos else None,
@@ -157,7 +157,7 @@ class SharegptDatasetConverter(DatasetConverter):
             system = messages[0][self.dataset_attr.content_tag]
             messages = messages[1:]
         else:
-            system = example[self.dataset_attr.system] if self.dataset_attr.system else ""
+            system = example[self.dataset_attr.system] if self.dataset_attr.system else "As a student, please learn the following image-text Q&A and responses."
 
         aligned_messages = []
         broken_data = False
@@ -326,11 +326,18 @@ def align_dataset(
     
     def filter_images(example):
         """过滤掉 images 数量超过 7 的样本"""
+
         if example is None:
             return False
         if example.get("_images") is not None and len(example["_images"]) != 0:
             image_len = len(example["_images"]) if isinstance(example["_images"], list) else 1
             return image_len <= 7
+
+        if example.get("_response") is not None:
+            for turn in example["_response"]:  # 遍历每一轮 response（如果是多轮）
+                content = turn["content"].lower()
+                if "openai" in content or "gpt" in content:
+                    return False
         return True
 
 
