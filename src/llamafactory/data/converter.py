@@ -126,7 +126,7 @@ class AlpacaDatasetConverter(DatasetConverter):
         output = {
             "_prompt": prompt,
             "_response": response,
-            "_system": example[self.dataset_attr.system] if self.dataset_attr.system else "As a student, please learn the following image-text Q&A and responses.",
+            "_system": example[self.dataset_attr.system] if self.dataset_attr.system else "",
             "_tools": example[self.dataset_attr.tools] if self.dataset_attr.tools else "",
             "_images": self._find_medias(example[self.dataset_attr.images]) if self.dataset_attr.images else None,
             "_videos": self._find_medias(example[self.dataset_attr.videos]) if self.dataset_attr.videos else None,
@@ -157,8 +157,7 @@ class SharegptDatasetConverter(DatasetConverter):
             system = messages[0][self.dataset_attr.content_tag]
             messages = messages[1:]
         else:
-            system = example[self.dataset_attr.system] if self.dataset_attr.system else "As a student, please learn the following image-text Q&A and responses."
-
+            system = example[self.dataset_attr.system] if self.dataset_attr.system else ""
         aligned_messages = []
         broken_data = False
         for turn_idx, message in enumerate(messages):
