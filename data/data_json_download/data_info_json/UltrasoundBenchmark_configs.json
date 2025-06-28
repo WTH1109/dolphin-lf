@@ -660,9 +660,9 @@
       "assistant_tag": "assistant"
     }
   },
-  "benchmark_qa_69": {
+  "benchmark_qa_69_new": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
-    "subset": "benchmark_qa_69",
+    "subset": "benchmark_qa_69_new",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",

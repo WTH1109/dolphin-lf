@@ -3,5 +3,7 @@
     "Chinese-medical-dialogue",
     "benchmark_qa_39_report",
     "39_ultrasound_report",
-    "Pascal_04"
+    "Pascal_04",
+    "anatomy_cls_new2",
+    "caption"
 ]

@@ -337,6 +337,8 @@ def align_dataset(
                 content = turn["content"].lower()
                 if "openai" in content or "gpt" in content:
                     return False
+                if "assistant" in content:
+                    return False
         return True
 
 

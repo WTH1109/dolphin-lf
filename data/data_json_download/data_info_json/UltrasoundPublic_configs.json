@@ -1,10 +1,41 @@
 {
+  "Chinese-DeepSeek-R1-Distill-data-110k": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundPublic",
+    "subset": "Chinese-DeepSeek-R1-Distill-data-110k",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "system": "system"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "Chinese-medical-dialogue": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundPublic",
     "subset": "Chinese-medical-dialogue",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "WeThink_Multimodal_Reasoning_120K": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundPublic",
+    "subset": "WeThink_Multimodal_Reasoning_120K",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images",
+      "system": "system"
     },
     "tags": {
       "role_tag": "role",

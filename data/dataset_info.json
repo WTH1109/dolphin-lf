@@ -106,6 +106,27 @@
       "assistant_tag": "assistant"
     }
   },
+  "laolao77/MMDU": {
+    "hf_hub_url": "./data/huggingface/laolao77/MMDU",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "images": "image"
+    }
+  },
+  "DolphinAI/SelfCognition": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/SelfCognition",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "39_ultrasound_report": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
     "subset": "39_ultrasound_report",
@@ -767,9 +788,9 @@
       "assistant_tag": "assistant"
     }
   },
-  "benchmark_qa_69": {
+  "benchmark_qa_69_new": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
-    "subset": "benchmark_qa_69",
+    "subset": "benchmark_qa_69_new",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -902,12 +923,43 @@
       "assistant_tag": "assistant"
     }
   },
+  "Chinese-DeepSeek-R1-Distill-data-110k": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundPublic",
+    "subset": "Chinese-DeepSeek-R1-Distill-data-110k",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "system": "system"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "Chinese-medical-dialogue": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundPublic",
     "subset": "Chinese-medical-dialogue",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "WeThink_Multimodal_Reasoning_120K": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundPublic",
+    "subset": "WeThink_Multimodal_Reasoning_120K",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images",
+      "system": "system"
     },
     "tags": {
       "role_tag": "role",
@@ -2142,9 +2194,9 @@
       "assistant_tag": "assistant"
     }
   },
-  "benchmark_qa_69_cn": {
+  "benchmark_qa_69_cn_new": {
     "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkZH",
-    "subset": "benchmark_qa_69_cn",
+    "subset": "benchmark_qa_69_cn_new",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -2442,6 +2494,21 @@
       "assistant_tag": "assistant"
     }
   },
+  "benchmark_qa_10_report_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
+    "subset": "benchmark_qa_10_report_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "benchmark_qa_10_s": {
     "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
     "subset": "benchmark_qa_10_s",
@@ -2517,6 +2584,21 @@
       "assistant_tag": "assistant"
     }
   },
+  "benchmark_qa_18_measurement_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
+    "subset": "benchmark_qa_18_measurement_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "benchmark_qa_18_s": {
     "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
     "subset": "benchmark_qa_18_s",
@@ -2547,9 +2629,9 @@
       "assistant_tag": "assistant"
     }
   },
-  "benchmark_qa_23_detection_s": {
+  "benchmark_qa_23_detection_s_new": {
     "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
-    "subset": "benchmark_qa_23_detection_s",
+    "subset": "benchmark_qa_23_detection_s_new",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -2580,6 +2662,21 @@
   "benchmark_qa_25_s": {
     "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
     "subset": "benchmark_qa_25_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_27_measurement_s_new": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
+    "subset": "benchmark_qa_27_measurement_s_new",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -2625,6 +2722,21 @@
   "benchmark_qa_31_detection_s": {
     "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
     "subset": "benchmark_qa_31_detection_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_31_measurement_s_new": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
+    "subset": "benchmark_qa_31_measurement_s_new",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -2817,6 +2929,21 @@
       "assistant_tag": "assistant"
     }
   },
+  "benchmark_qa_50_measurement_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
+    "subset": "benchmark_qa_50_measurement_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "benchmark_qa_50_s": {
     "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
     "subset": "benchmark_qa_50_s",
@@ -2922,21 +3049,6 @@
       "assistant_tag": "assistant"
     }
   },
-  "benchmark_qa_69_s": {
-    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
-    "subset": "benchmark_qa_69_s",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "messages",
-      "images": "images"
-    },
-    "tags": {
-      "role_tag": "role",
-      "content_tag": "content",
-      "user_tag": "user",
-      "assistant_tag": "assistant"
-    }
-  },
   "benchmark_qa_70_s": {
     "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
     "subset": "benchmark_qa_70_s",
@@ -2985,6 +3097,1086 @@
   "benchmark_qa_75_s": {
     "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillation",
     "subset": "benchmark_qa_75_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_79_detection_": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_79_detection_",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_79_detection__cn": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_79_detection__cn",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_82_classification_": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_82_classification_",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_82_classification__cn": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_82_classification__cn",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_83_classification_": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_83_classification_",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_83_classification__cn": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_83_classification__cn",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_83_detection_": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_83_detection_",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_83_detection__cn": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_83_detection__cn",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_84_classification_": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_84_classification_",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_84_classification__cn": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_84_classification__cn",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_84_detection_": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_84_detection_",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_84_detection__cn": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_84_detection__cn",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_86_classification_": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_86_classification_",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_86_classification__cn": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_86_classification__cn",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_86_detection_": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_86_detection_",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_86_detection__cn": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_86_detection__cn",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_87_classification_": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_87_classification_",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_87_classification__cn": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_87_classification__cn",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_87_detection_": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_87_detection_",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_87_detection__cn": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_87_detection__cn",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_92_classification_": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_92_classification_",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_92_classification__cn": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_92_classification__cn",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_92_detection_": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_92_detection_",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_92_detection__cn": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_92_detection__cn",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_92is_healthy_classification_": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_92is_healthy_classification_",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_92is_healthy_classification__cn": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_92is_healthy_classification__cn",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_93_detection_": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_93_detection_",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "inc_data_93_detection__cn": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundIncrementalData",
+    "subset": "inc_data_93_detection__cn",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_03_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_03_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_04_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_04_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_09_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_09_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_10_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_10_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_10_report_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_10_report_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_13_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_13_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_16_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_16_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_17_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_17_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_18_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_18_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_18_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_18_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_18_measurement_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_18_measurement_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_21_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_21_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_23_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_23_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_23_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_23_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_25_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_25_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_27_measurement_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_27_measurement_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_28_class_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_28_class_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_28_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_28_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_31_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_31_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_31_measurement_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_31_measurement_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_32_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_32_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_32_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_32_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_37_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_37_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_37_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_37_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_38_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_38_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_40_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_40_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_42_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_42_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_44_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_44_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_47_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_47_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_48_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_48_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_49_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_49_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_50_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_50_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_50_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_50_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_50_measurement_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_50_measurement_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_52_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_52_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_53_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_53_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_53_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_53_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_64_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_64_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_66_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_66_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_67_detection_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_67_detection_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_70_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_70_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_74_normal_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_74_normal_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_74_visible_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_74_visible_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_75_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkDistillationZH",
+    "subset": "benchmark_qa_75_cn_s",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",

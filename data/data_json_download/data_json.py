@@ -125,7 +125,10 @@ if __name__ == "__main__":
         'DolphinAI/UltrasoundPublic',
         'DolphinAI/BenchmarkZH',
         'DolphinAI/Pascal',
-        'DolphinAI/BenchmarkDistillation'
+        'DolphinAI/BenchmarkDistillation',
+        "DolphinAI/UltrasoundIncrementalData",
+        "DolphinAI/BenchmarkDistillationZH",
+        
     ]
 
     for dataset in dataset_list:

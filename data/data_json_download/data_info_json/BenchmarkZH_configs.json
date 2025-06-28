@@ -614,9 +614,9 @@
       "assistant_tag": "assistant"
     }
   },
-  "benchmark_qa_69_cn": {
+  "benchmark_qa_69_cn_new": {
     "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkZH",
-    "subset": "benchmark_qa_69_cn",
+    "subset": "benchmark_qa_69_cn_new",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
