@@ -302,6 +302,10 @@ def align_dataset(
         else:
             return question
 
+    def image_to_bytes(path):
+        with open(os.path.join(dataset_attr.dataset_name, path[1:] if path.startswith(os.sep) else path), "rb") as f:
+            return f.read()
+
     def add_image_tag(example):
         """
         Adds <image> tag to the prompt if the example contains an image.
@@ -310,12 +314,29 @@ def align_dataset(
         if example.get("_prompt") is not None and example.get("_images") is not None and len(example["_images"]) != 0:
             image_len = len(example["_images"]) if isinstance(example["_images"], list) else 1
             # image_place_holder_cnt = example['messages'][0]['content'].count("<image>")
-            question = example['_prompt'][0]['content'].replace("<image>", "").strip()
-            answer = example['_response'][0]['content']
-            
-            question = refine_question(question, answer)
 
-            example['_prompt'][0]['content'] = "<df_image_placeholder>" * image_len + question
+            if len(example["_images"]) > 0 and isinstance(example["_images"][0], str):
+                example["_images"] = [
+                    {
+                        "bytes": image_to_bytes(p),
+                        "path": None
+                    }
+                    for p in example["_images"]
+                ]
+            multi_chat = False
+            for turn in example['_prompt']:
+                content = turn['content']
+                # 如果含有 <ImageHere>
+                if "<ImageHere>" in content:
+                    content = content.replace("<ImageHere>", "<df_image_placeholder>" )
+                    turn['content'] = content
+                    multi_chat = True
+
+            if not multi_chat:
+                question = example['_prompt'][0]['content'].replace("<image>", "").strip()
+                answer = example['_response'][0]['content']
+                question = refine_question(question, answer)
+                example['_prompt'][0]['content'] = "<df_image_placeholder>" * image_len + question
 
         if example.get("_prompt") is not None and example.get("_videos") is not None and len(example["_videos"]) != 0:
             image_len = len(example["_videos"]) if isinstance(example["_videos"], list) else 1

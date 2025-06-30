@@ -734,5 +734,50 @@
       "user_tag": "user",
       "assistant_tag": "assistant"
     }
+  },
+  "benchmark_qa_99_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
+    "subset": "benchmark_qa_99_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_99_locattion": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
+    "subset": "benchmark_qa_99_locattion",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_99_section": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
+    "subset": "benchmark_qa_99_section",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
   }
 }

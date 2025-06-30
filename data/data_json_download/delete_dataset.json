@@ -4,6 +4,8 @@
     "benchmark_qa_39_report",
     "39_ultrasound_report",
     "Pascal_04",
-    "anatomy_cls_new2",
-    "caption"
+    "anatomy",
+    "benchmark_qa_99_cn_s",
+    "caption",
+    "yc"
 ]

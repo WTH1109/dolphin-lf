@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+data/data_json_download/data_json.py
+
 # C extensions
 *.so
 

@@ -863,6 +863,51 @@
       "assistant_tag": "assistant"
     }
   },
+  "benchmark_qa_99_cn_s": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkZH",
+    "subset": "benchmark_qa_99_cn_s",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_99_locattion": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
+    "subset": "benchmark_qa_99_locattion",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_99_section": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundBenchmark",
+    "subset": "benchmark_qa_99_section",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "r1_distillation_v1_new": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundDistillation",
     "subset": "r1_distillation_v1_new",
@@ -2257,6 +2302,36 @@
   "benchmark_qa_75_cn": {
     "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkZH",
     "subset": "benchmark_qa_75_cn",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_99_location_cn": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkZH",
+    "subset": "benchmark_qa_99_location_cn",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "images": "images"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
+  "benchmark_qa_99_section_cn": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/BenchmarkZH",
+    "subset": "benchmark_qa_99_section_cn",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
