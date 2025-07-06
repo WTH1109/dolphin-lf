@@ -1,4 +1,19 @@
 {
+  "MultiroundReasoning_v1": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundDistillation",
+    "subset": "MultiroundReasoning_v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "system": "system"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "r1_distillation_v1_new": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundDistillation",
     "subset": "r1_distillation_v1_new",

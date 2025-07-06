@@ -5,7 +5,7 @@ import json
 from typing import Dict, Any
 
 from huggingface_hub import login, HfApi
-hf_token = ""
+hf_token = 
 
 def download_readme(repo_id: str, filename: str = "README.md") -> str:
     """从 HuggingFace 数据集仓库下载 README 文件"""
