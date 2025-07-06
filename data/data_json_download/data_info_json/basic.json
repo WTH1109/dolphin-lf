@@ -11,8 +11,16 @@
     },
     "identity_reasoning": {
         "file_name": "identity_reasoning.json",
+        "formatting": "sharegpt",
         "columns": {
-            "system": "system"
+            "system": "system",
+            "messages": "messages",
+        },
+        "tags": {
+            "role_tag": "role",
+            "content_tag": "content",
+            "user_tag": "user",
+            "assistant_tag": "assistant"
         }
     },
     "autoif_4omini": {
