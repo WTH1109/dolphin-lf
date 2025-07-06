@@ -914,6 +914,21 @@
       "assistant_tag": "assistant"
     }
   },
+  "MultiroundReasoning_v1": {
+    "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundDistillation",
+    "subset": "MultiroundReasoning_v1",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages",
+      "system": "system"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant"
+    }
+  },
   "r1_distillation_v1_new": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundDistillation",
     "subset": "r1_distillation_v1_new",
@@ -1019,9 +1034,9 @@
       "assistant_tag": "assistant"
     }
   },
-  "medical-o1-reasoning-SFT_en": {
+  "medical-o1-reasoning-SFT_en_new": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundPublic",
-    "subset": "medical-o1-reasoning-SFT_en",
+    "subset": "medical-o1-reasoning-SFT_en_new",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
@@ -1034,9 +1049,9 @@
       "assistant_tag": "assistant"
     }
   },
-  "medical-o1-reasoning-SFT_zh": {
+  "medical-o1-reasoning-SFT_zh_new": {
     "hf_hub_url": "./data/huggingface/DolphinAI/UltrasoundPublic",
-    "subset": "medical-o1-reasoning-SFT_zh",
+    "subset": "medical-o1-reasoning-SFT_zh_new",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
