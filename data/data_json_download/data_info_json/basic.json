@@ -9,6 +9,12 @@
     "identity": {
         "file_name": "identity.json"
     },
+    "identity_reasoning": {
+        "file_name": "identity_reasoning.json",
+        "columns": {
+            "system": "system"
+        }
+    },
     "autoif_4omini": {
         "file_name": "/mnt/nlp-ali/usr/data/sft/autoif/4omini_sharegpt.json",
         "formatting": "sharegpt",
